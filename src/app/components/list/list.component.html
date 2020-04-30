@@ -3,26 +3,65 @@
     <table>
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Item Name</th>
-                <th>Item Price</th>
+                <th>Valor</th>
+                <th>Pipe</th>
+                <th>Resultado</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Alvin</td>
-                <td>Eclair</td>
-                <td>$0.87</td>
+                <td>{{ name }}</td>
+                <td>uppercase</td>
+                <td>{{ name | uppercase }}</td>
             </tr>
             <tr>
-                <td>Alan</td>
-                <td>Jellybean</td>
-                <td>$3.76</td>
+                <td>{{ name }}</td>
+                <td>lowercase</td>
+                <td>{{ name | lowercase }}</td>
             </tr>
             <tr>
-                <td>Jonathan</td>
-                <td>Lollipop</td>
-                <td>$7.00</td>
+                <td>{{ price }}</td>
+                <td>currency:'MXN'</td>
+                <td>{{ price | currency:'MXN' }}</td>
+            </tr>
+            <tr>
+                <td>{{ price }}</td>
+                <td>currency:'USD'</td>
+                <td>{{ price | currency:'USD' }}</td>
+            </tr>
+            <tr>
+                <td>{{ price }}</td>
+                <td>currency:'EUR'</td>
+                <td>{{ price | currency:'EUR' }}</td>
+            </tr>
+            <tr>
+                <td>{{ user }}</td>
+                <td>json</td>
+                <td>
+                    <pre>
+                        {{ user | json }}
+                    </pre>
+                </td>
+            </tr>
+            <tr>
+                <td>{{ date }}</td>
+                <td>date:'short'</td>
+                <td>{{ date | date:'short' }}</td>
+            </tr>
+            <tr>
+                <td>{{ date }}</td>
+                <td>date:'medium'</td>
+                <td>{{ date | date:'medium' }}</td>
+            </tr>
+            <tr>
+                <td>{{ date }}</td>
+                <td>date:'long'</td>
+                <td>{{ date | date:'long' }}</td>
+            </tr>
+            <tr>
+                <td>{{ name }}</td>
+                <td>mipipe</td>
+                <td>{{ name | mipipe:'?' }}</td>
             </tr>
         </tbody>
     </table>
